@@ -1,0 +1,98 @@
+##Exercicio 2
+
+Lista_Numero = [6,32,48,5,13,21,77]
+def ParouImpar (Lista_Numero):
+    for i in Lista_Numero:
+        if i %2 ==0:
+            print(i)
+
+resul = ParouImpar (Lista_Numero)
+
+##Exercicio 3
+inicio = int (input('Digite seu primeiro número:'))
+final = int (input('Digite o seu último número:'))
+soma = 0
+for i in range (inicio,final+1):
+    if i %2 == 0:
+        print (i)
+        soma = soma + i
+print (f'A soma dos números pare são:{soma}')
+
+
+##Exercicio 4
+
+Perguntas = ['Telefonou para vitima?', 'Esteve no local do crime?', 'Mora perto da vítima?', 
+             'Devia algum valor para vítima?', 'Já trabalhou para  a vítima?']
+
+contador =0
+for i in Perguntas:
+    resposta = input(i)
+    if resposta == 's':
+        contador = contador +1
+
+if contador == 5:
+    print ('Assassino')
+elif contador == 3 or contador ==4:
+    print ('Cumplice')
+elif contador == 2:
+    print ('Suspeito')
+else:
+    print ('Inocente')
+
+##Exercicio 6
+
+pTermo = int (input('Digite o primeiro termo:'))
+qTermo = int (input('Digite a quantidade de termos:'))
+rTermo = int (input('Digite a razão entre os termos:'))
+fTermo = pTermo+qTermo
+calculo = pTermo
+soma =0
+print (pTermo)
+for i in range(pTermo,fTermo):
+    calculo = calculo + rTermo
+    soma = soma + calculo
+    print (calculo)
+
+print (f'A soma dos números são:{soma}')
+
+
+##Exercicio 8
+
+print ('Escolha uma das opções abaixo:')
+print ('1. Jair Rodrigues')
+print ('2. Carlos Luz')
+print ('3. Neves')
+print ('4.Nulo')
+print ('5.Branco')
+
+resposta = ""
+contador1 = 0
+contador2 = 0
+contador3 = 0
+contador4 = 0
+contador5 = 0
+
+while resposta != 6:
+
+    resposta = int(input('Digite o número do seu candidato:'))
+
+
+    if resposta == 1:
+        contador1 = contador1+1
+    elif resposta == 2:
+        contador2 = contador2+1
+    elif resposta == 3:
+        contador3=contador3+1
+    elif resposta ==4:
+        contador4=contador4+1
+    else:
+        contador5=contador5+1
+
+print (f'O candidato Jair Rodrigues {contador1}')
+print (f'O candidato Carlos Luz {contador2}')
+print (f'O candidato Neves {contador3}')
+print (f'A quantidade de votos nulos {contador4}')
+print (f'A quantidade de votos em branco {contador5}')
+
+
+
