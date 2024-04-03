@@ -17,19 +17,31 @@ class Application:
         
         self.container3 = Frame(master)
         self.container3.pack()
-        self.botao = Button(self.container3)
-        self.botao['text'] = 'ENTRAR'
-        self.botao.bind ("<Button-1>", self.msgBoasVindas)
-        self.botao.pack()
+        
         
         self.container4 = Frame(master)
         self.container4.pack()
         self.msgBV = Label(self.container4, text="")
         self.msgBV. pack()
         
+        self.container5 = Frame(master)
+        self.container5.pack()
+        self.labelMsg = Label(self.container5, text = 'Insira o nome do seu curso:')
+        self.labelMsg.pack (side=LEFT)
+        
+        self.nomeCurso = Entry(self.container5)
+        self.nomeCurso.pack()
+        self.botao = Button (self.container5)
+        self.botao['text'] = 'ENTRAR'
+        self.botao.bind ("<Button-1>",self.msgBoasVindas)
+        self.botao.pack()
+        
     def msgBoasVindas (self, event):
         aluno = self.nomeAluno.get()
-        self.msgBV ['text'] =f"Seja bem vindo(a), {aluno}"        
+        curso = self.nomeCurso.get()
+        self.msgBV ['text'] =f"Seja bem vindo(a), {aluno}, seu curso é {curso}" 
+        
+        
 root = Tk()
 Application (root)
 root.mainloop()
